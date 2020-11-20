@@ -498,7 +498,10 @@ void main()
 	myEngine->StartWindowed();
 
 	// Add default folder for meshes and other media
-	myEngine->AddMediaFolder("../Media");
+	myEngine->AddMediaFolder("C:\\ProgramData\\TL-Engine\\Media");
+	myEngine->AddMediaFolder("Media");
+	myEngine->AddMediaFolder("Defult");
+
 
 	/**** Set up your scene here ****/
 
@@ -570,7 +573,7 @@ void main()
 	IModel* tempModel = mDummy->CreateModel(0, 0, 0);                  // Temprory Position  Model Creating
 	IModel* island2  = mIsland2->CreateModel(0, -5, 115);              // Island 2  Model Creating
 	//Arraye Models
-	IModel* aVan                                                       // Van Array      
+	IModel* aVan[nVans];                                               // Van Array      
 	IModel* aCar[nCars];                                               // Rover station Array
 	IModel* aPickUp[nPickUps];                                         // Pick Up Array
 	IModel* aRover[nRovers];                                           // Range Rover Array
